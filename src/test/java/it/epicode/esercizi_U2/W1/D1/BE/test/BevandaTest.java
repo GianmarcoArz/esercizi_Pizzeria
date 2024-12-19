@@ -23,16 +23,6 @@ private BevandaRepository bevandaRepository;
     @DisplayName("Test per il salvataggio della Bevanda Lemonade")
     void testBevandaCreation() {
 
-//        Optional<Bevanda> bevanda = Optional.of(new Bevanda());
-//        bevanda = bevandaRepository.findById(4L);
-//
-//
-//
-//        assertEquals("Lemonade", bevanda.get().getNome());
-//        assertEquals(128, bevanda.get().getCalorie());
-//        assertEquals(1.3, bevanda.get().getPrezzo());
-
-
         Optional<Bevanda> bevanda = bevandaRepository.findById(4L);
 
         assertTrue(bevanda.isPresent(), "Bevanda con ID 4L non trovata");

@@ -32,5 +32,8 @@ public class PizzeRunner implements ApplicationRunner {
         pizzaRepository.save(newPizzaHawaaiiana);
         pizzaRepository.save(newPizzaSalame);
 
+        pizzaRepository.findByNomeContainingIgnoreCase("Marg").forEach(pizza -> System.out.println(pizza.getNome()));
+
+        pizzaRepository.findByOrderByCalorieDesc().forEach(pizza -> System.out.println("La " + pizza.getNome() + " ha " + pizza.getCalorie() + " calorie"));
     }
 }
